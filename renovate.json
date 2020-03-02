@@ -1,0 +1,109 @@
+{
+  "extends": [
+    "config:base",
+    "schedule:weekdays",
+    ":enableVulnerabilityAlertsWithLabel(security)",
+    ":labels(dependencies, skynet:merge:squash)",
+    ":prHourlyLimitNone",
+    ":timezone(Europe/Oslo)"
+  ],
+  "ignorePresets": [
+    ":prHourlyLimit2",
+    ":prConcurrentLimit20"
+  ],
+  "ignoreDeps": [
+    "core-js"
+  ],
+  "prConcurrentLimit": 1,
+  "packageRules": [
+    {
+      "packagePatterns": [
+        "*"
+      ],
+      "minor": {
+        "groupName": "all non-major dependencies",
+        "groupSlug": "all-minor-patch"
+      }
+    },
+    {
+      "updateTypes": [
+        "major"
+      ],
+      "labels": [
+        "MAJOR-UPDATE",
+        "dependencies",
+        "skynet:merge:squash"
+      ]
+    },
+    {
+      "depTypeList": [
+        "devDependencies"
+      ],
+      "updateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "devDependencies (non-major)"
+    },
+    {
+      "extends": "packages:test",
+      "packageNames": [
+        "babel-jest",
+        "ts-jest"
+      ],
+      "groupName": "test packages"
+    },
+    {
+      "extends": "packages:linters",
+      "packagePatterns": [
+        "prettier"
+      ],
+      "groupName": "linters"
+    },
+    {
+      "groupName": "definitelyTyped",
+      "packagePatterns": [
+        "^@types/"
+      ],
+      "major": {
+        "enabled": false
+      }
+    },
+    {
+      "packagePatterns": [
+        "^swagger"
+      ],
+      "packageNames": [
+        "swagger"
+      ],
+      "groupName": "Swagger packages"
+    },
+    {
+      "packagePatterns": [
+        "^koa-",
+        "^@koa/",
+        "^@uswitch/koa-"
+      ],
+      "packageNames": [
+        "koa"
+      ],
+      "groupName": "Koa packages"
+    },
+    {
+      "packagePatterns": [
+        "^moment-"
+      ],
+      "packageNames": [
+        "moment"
+      ],
+      "groupName": "Moment packages"
+    }
+  ],
+  "rangeStrategy": "bump",
+  "semanticCommits": true,
+  "semanticCommitType": "chore",
+  "semanticCommitScope": "",
+  "stabilityDays": 3,
+  "unpublishSafe": true,
+  "prCreation": "not-pending"
+}
