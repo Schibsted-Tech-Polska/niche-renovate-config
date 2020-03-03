@@ -5,7 +5,9 @@
     ":enableVulnerabilityAlertsWithLabel(security)",
     ":labels(dependencies, skynet:merge:squash)",
     ":prHourlyLimitNone",
-    ":timezone(Europe/Oslo)"
+    ":timezone(Europe/Oslo)",
+    ":docker",
+    "docker:enableMajor"
   ],
   "ignorePresets": [
     ":prHourlyLimit2",
