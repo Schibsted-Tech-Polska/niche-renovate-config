@@ -17,6 +17,7 @@
     "core-js"
   ],
   "prConcurrentLimit": 3,
+  "prCommitsPerRunLimit": 3,
   "packageRules": [
     {
       "packagePatterns": [
@@ -114,5 +115,6 @@
   "semanticCommitScope": "",
   "stabilityDays": 3,
   "unpublishSafe": true,
-  "prCreation": "not-pending"
+  "prCreation": "not-pending",
+  "recreateClosed": true
 }
