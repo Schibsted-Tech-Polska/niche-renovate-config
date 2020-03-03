@@ -99,6 +99,13 @@
         "moment"
       ],
       "groupName": "Moment packages"
+    },
+    {
+      "packageNames": ["node"],
+      "major": {
+        "enabled": true
+      },
+      "allowedVersions": "^8 || ^10 || ^12"
     }
   ],
   "rangeStrategy": "bump",
