@@ -115,6 +115,5 @@
   "semanticCommitScope": "",
   "stabilityDays": 3,
   "unpublishSafe": true,
-  "prCreation": "not-pending",
-  "recreateClosed": true
+  "prCreation": "not-pending"
 }
