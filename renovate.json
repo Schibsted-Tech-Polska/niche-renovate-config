@@ -6,6 +6,7 @@
     ":enableVulnerabilityAlertsWithLabel(security)",
     ":labels(dependencies, skynet:merge:squash)",
     ":prHourlyLimitNone",
+    ":prImmediately",
     ":timezone(Europe/Oslo)",
     ":docker",
     "docker:enableMajor"
