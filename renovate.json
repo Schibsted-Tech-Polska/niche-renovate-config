@@ -1,6 +1,7 @@
 {
   "extends": [
     "config:base",
+    ":rebaseStalePrs",
     "schedule:weekdays",
     ":enableVulnerabilityAlertsWithLabel(security)",
     ":labels(dependencies, skynet:merge:squash)",
