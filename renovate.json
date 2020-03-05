@@ -116,5 +116,6 @@
   "stabilityDays": 3,
   "unpublishSafe": true,
   "prCreation": "not-pending",
-  "recreateClosed": true
+  "recreateClosed": true,
+  "rebaseWhen": "behind-base-branch"
 }
