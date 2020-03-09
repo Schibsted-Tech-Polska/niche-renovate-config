@@ -36,8 +36,7 @@
       ],
       "labels": [
         "MAJOR-UPDATE",
-        "dependencies",
-        "skynet:merge:squash"
+        "dependencies"
       ]
     },
     {
