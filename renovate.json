@@ -1,10 +1,12 @@
 {
   "extends": [
     "config:base",
+    "group:allNonMajor",
+    "group:definitelyTyped",
     ":rebaseStalePrs",
     "schedule:weekdays",
     ":enableVulnerabilityAlertsWithLabel(security)",
-    ":labels(dependencies, skynet:merge:squash)",
+    ":labels(dependencies)",
     ":prHourlyLimitNone",
     ":prImmediately",
     ":timezone(Europe/Oslo)",
@@ -21,15 +23,6 @@
   "prConcurrentLimit": 3,
   "prCommitsPerRunLimit": 3,
   "packageRules": [
-    {
-      "packagePatterns": [
-        "*"
-      ],
-      "minor": {
-        "groupName": "all non-major dependencies",
-        "groupSlug": "all-minor-patch"
-      }
-    },
     {
       "updateTypes": [
         "major"
@@ -63,15 +56,6 @@
         "prettier"
       ],
       "groupName": "linters"
-    },
-    {
-      "groupName": "definitelyTyped",
-      "packagePatterns": [
-        "^@types/"
-      ],
-      "major": {
-        "enabled": false
-      }
     },
     {
       "packagePatterns": [
@@ -117,6 +101,5 @@
   "stabilityDays": 3,
   "unpublishSafe": true,
   "prCreation": "immediate",
-  "rebaseWhen": "behind-base-branch",
-  "recreateClosed": true
+  "rebaseWhen": "behind-base-branch"
 }
