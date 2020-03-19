@@ -8,7 +8,7 @@
     ":enableVulnerabilityAlertsWithLabel(security)",
     ":labels(dependencies)",
     ":prHourlyLimitNone",
-    ":prImmediately",
+    ":prNotPending",
     ":timezone(Europe/Oslo)",
     ":docker",
     "docker:enableMajor"
