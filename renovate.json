@@ -67,6 +67,13 @@
       "groupName": "Swagger packages"
     },
     {
+      "extends": "monorepo:hapijs",
+      "packagePatterns": [
+        "^hapi-"
+      ],
+      "groupName": "hapijs monorepo"
+    },
+    {
       "packagePatterns": [
         "^koa-",
         "^@koa/",
