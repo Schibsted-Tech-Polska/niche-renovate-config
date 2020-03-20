@@ -6,7 +6,7 @@
     ":rebaseStalePrs",
     "schedule:weekdays",
     ":enableVulnerabilityAlertsWithLabel(security)",
-    ":labels(dependencies)",
+    ":label(dependencies)",
     ":prHourlyLimitNone",
     ":prNotPending",
     ":timezone(Europe/Oslo)",
